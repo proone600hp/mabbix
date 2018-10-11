@@ -1,4 +1,4 @@
-Welcome to Mabbix its Fork from davidegiacometti/mabbix with ssl off 
+Welcome to Mabbix its Fork from davidegiacometti/mabbix without ssl check
 ======
 
 A small web application written in PHP and AngularJS that interact with Zabbix in order to export graphs as PNG or PDF. It's fully developed on Zabbix **chart2.php**.
