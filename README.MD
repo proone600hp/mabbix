@@ -30,7 +30,6 @@ Installation
 ```bash
 apt-get install php5-curl
 git clone https://github.com/proone600hp/mabbix.git
-tar zxpf mabbix-0.1.0.tar.gz
 mv mabbix /opt
 mysql -uroot -p -e "CREATE DATABASE mabbix CHARACTER SET utf8"
 mysql -uroot -p -e "CREATE USER 'mabbix'@'localhost' IDENTIFIED BY '[PASSWORD]'"
