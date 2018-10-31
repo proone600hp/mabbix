@@ -32,10 +32,10 @@ apt-get install php5-curl
 wget https://github.com/davidegiacometti/mabbix/releases/download/beta1/mabbix-0.1.0.tar.gz
 tar zxpf mabbix-0.1.0.tar.gz
 mv mabbix /opt
-mysql -u[USER] -h[HOST] -p -e "CREATE DATABASE mabbix CHARACTER SET utf8"
-mysql -u[USER] -h[HOST] -p -e "CREATE USER 'mabbix'@'localhost' IDENTIFIED BY '[PASSWORD]'"
-mysql -u[USER] -h[HOST] -p -e "GRANT SELECT, INSERT, UPDATE, DELETE ON mabbix.* TO 'mabbix'@'localhost'"
-mysql -u[USER] -h[HOST] -p mabbix < /opt/mabbix/database/schema.sql
+mysql -uroot -p -e "CREATE DATABASE mabbix CHARACTER SET utf8"
+mysql -uroot -p -e "CREATE USER 'mabbix'@'localhost' IDENTIFIED BY '[PASSWORD]'"
+mysql -uroot -p -e "GRANT SELECT, INSERT, UPDATE, DELETE ON mabbix.* TO 'mabbix'@'localhost'"
+mysql -uroot -p mabbix < /opt/mabbix/database/schema.sql
 cp /opt/mabbix/public/back-end/core/configuration.php.example /opt/mabbix/public/back-end/core/configuration.php
 # Edit the configuration.php with the settings of your environment
 cp /opt/mabbix/public/config.sample.json /opt/mabbix/public/config.json
